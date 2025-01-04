@@ -18,7 +18,7 @@ export default function RootLayout({
     children,
 }: Readonly<Children>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <body
                 className={`${roboto.variable} antialiased`}
             >
