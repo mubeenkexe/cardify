@@ -9,6 +9,14 @@ declare global {
         answer: string;
         category: string;
     }
+
+    interface ButtonProps {
+        children: React.ReactNode;
+        type?: "button" | "submit" | "reset";
+        onClick?: () => void;
+        href?: string;
+        className?: string;
+    }
 }
 
 export {};
