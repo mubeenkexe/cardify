@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "@/style/globals.css";
+import StoreProvider from "@/components/layout/StoreProvider";
 
 const roboto = Roboto({
     variable: "--font-roboto",
@@ -15,15 +16,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+}: Readonly<Children>) {
     return (
         <html lang="en">
             <body
                 className={`${roboto.variable} antialiased`}
             >
-                {children}
+                <StoreProvider>
+                    {children}
+                </StoreProvider>
             </body>
         </html>
     );
