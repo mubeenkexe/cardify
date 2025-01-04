@@ -10,7 +10,7 @@ import { Provider } from "react-redux";
  * @param children The React tree that should be wrapped with the store.
  * @returns A React component that wraps the given children with a Redux store.
  */
-const StoreProvider = (children: React.ReactNode) => {
+const StoreProvider = ({ children }: Children) => {
     const storeRef = useRef<AppStore>(undefined);
     if (!storeRef.current) storeRef.current = makeStore();
 
