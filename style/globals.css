@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-background-light text-text-primary;
+    }
+
+    .main-layout {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+}
+
+@layer components {
+    .display-center {
+        @apply flex items-center justify-center;
+    }
+
+    .display-between {
+        @apply flex items-center justify-between;
+    }
+
+    .button {
+        @apply p-4 rounded-md text-sm font-medium text-white bg-primary hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-light;
+    }
+}
