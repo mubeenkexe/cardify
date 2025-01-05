@@ -21,12 +21,12 @@ const DashboardPage = () => {
                 <div className="col-span-1 border-2 rounded-lg flex flex-col gap-4 p-5">
                     <h1 className="text-3xl font-bold">Quick Actions</h1>
                     <Button
-                        href="/create-deck"
+                        href="/dashboard/create-deck"
                         className="flex items-center gap-4"
                     >
                         <FaCirclePlus /> Create New Deck
                     </Button>
-                    <Button href="/study" className="flex items-center gap-4">
+                    <Button href="/dashboard/study" className="flex items-center gap-4">
                         <FaBookOpen /> Start Studying
                     </Button>
                 </div>
